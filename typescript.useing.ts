@@ -12,9 +12,9 @@ const phoneNumber3: boolean = false;
 const add = (n1: number, n2: number, isPrintResult: boolean, resultText: string) => {
     const result = n1 + n2
     if (isPrintResult) {
-        console.log(resultText + result);
+        // console.log(resultText + result);
     } else {
-        console.log(result);
+        // console.log(result);
     }
 
 
@@ -128,9 +128,22 @@ const combinedStrungAges = combine("30", "26", "as-number")
 const combinedNames = combine("mohamad", "ali", "as-text")
 
 
-console.log(combinedAges);
-console.log(combinedStrungAges);
-console.log(combinedNames);
+// console.log(combinedAges);
+// console.log(combinedStrungAges);
+// console.log(combinedNames);
+
+
+function Add(n1: number, n2: number) {
+    return n1 + n2
+}
+
+
+const PrintResult = (num: number): void => {
+    console.log("result is : " + num);
+
+}
+console.log(PrintResult(Add(5, 12)));
+
 
 
 

@@ -4,10 +4,10 @@ var phoneNumber3 = false;
 var add = function (n1, n2, isPrintResult, resultText) {
     var result = n1 + n2;
     if (isPrintResult) {
-        console.log(resultText + result);
+        // console.log(resultText + result);
     }
     else {
-        console.log(result);
+        // console.log(result);
     }
     return n1 + n2;
 };
@@ -50,10 +50,6 @@ var person = {
     ],
     role: Role.ADMIN
 };
-// console.log(Role);
-// if (person.role === 1) {
-//     console.log('mohamad');
-// }
 function combine(input1, input2, resultType) {
     var result;
     if (typeof input1 == "number" && typeof input2 == "number") {
@@ -69,9 +65,16 @@ function combine(input1, input2, resultType) {
         return result.toString();
     }
 }
-var combinedAges = combine(30, 26, "as-text");
+var combinedAges = combine(30, 26, "as-number");
 var combinedStrungAges = combine("30", "26", "as-number");
 var combinedNames = combine("mohamad", "ali", "as-text");
-console.log(combinedAges);
-console.log(combinedStrungAges);
-console.log(combinedNames);
+// console.log(combinedAges);
+// console.log(combinedStrungAges);
+// console.log(combinedNames);
+function Add(n1, n2) {
+    return n1 + n2;
+}
+var PrintResult = function (num) {
+    console.log("result is : " + num);
+};
+console.log(PrintResult(Add(5, 12)));
