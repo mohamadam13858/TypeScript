@@ -18,10 +18,19 @@ var isPrintResult = true;
 var resultText = "Result is :";
 add(number1, number2, isPrintResult, resultText);
 // let person:object;
-var person;
-person = {
+var person = {
     name: "mohamad",
     age: 23,
-    isMale: true
+    isMale: true,
+    hobbies: [
+        "sports", "cooking", "watch Movies"
+    ]
 };
-console.log(person.name + "-" + person.age);
+var favoriteActivities;
+favoriteActivities = ['music', 'coding'];
+// console.log(person.name + "-" + person.age);
+console.log(person.name);
+for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
+    var hobby = _a[_i];
+    console.log(hobby);
+}

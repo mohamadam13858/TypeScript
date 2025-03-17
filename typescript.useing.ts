@@ -39,16 +39,31 @@ add(number1, number2, isPrintResult, resultText);
 
 // let person:object;
 
-let person:{
-    name:string,
-    age:number,
-    isMale:true
-};
-
-person = {
+let person = {
     name: "mohamad",
     age: 23,
-    isMale: true
+    isMale: true,
+    hobbies: [
+        "sports", "cooking", "watch Movies"
+    ]
 }
 
-console.log(person.name + "-" + person.age);
+
+let favoriteActivities: string[];
+
+favoriteActivities = ['music', 'coding'];
+
+
+// console.log(person.name + "-" + person.age);
+
+console.log(person.name);
+
+
+for (const hobby of person.hobbies) {
+    console.log(hobby);
+
+}
+
+
+
+
