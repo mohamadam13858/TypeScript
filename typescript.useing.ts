@@ -39,25 +39,6 @@ add(number1, number2, isPrintResult, resultText);
 
 // let person:object;
 
-let person:{
-    name:string,
-    age:number,
-    isMale:boolean,
-    hobbies:string[],
-    role: [number , string]
-} = {
-    name: "mohamad",
-    age: 23,
-    isMale: true,
-    hobbies: [
-        "sports", "cooking", "watch Movies"
-    ],
-    role:[11 , "nn"]
-}
-
-person.role.push("admin")
-
-console.log(person);
 
 
 
@@ -71,10 +52,10 @@ favoriteActivities = ['music', 'coding'];
 // console.log(person.name);
 
 
-for (const hobby of person.hobbies) {
-    console.log(hobby);
+// for (const hobby of person.hobbies) {
+//     console.log(hobby);
 
-}
+// }
 
 
 let arrayExample = ['mohamad', 32, true]
@@ -90,6 +71,33 @@ tupleExample = ["mj", 55, true]
 
 tupleExample[0] = "jdjh"
 tupleExample[1] = 55
+
+
+
+// const ADMIN=0 ;
+// const READ_ONLY_USER=1;
+// const AUTHOR = 2
+
+
+enum Role { ADMIN=1, READ_ONLY_USER, AUTHOR }
+
+let person = {
+    name: "mohamad",
+    age: 23,
+    isMale: true,
+    hobbies: [
+        "sports", "cooking", "watch Movies"
+    ],
+    role: Role.ADMIN
+}
+
+console.log(Role);
+
+
+// if (person.role === 1) {
+//     console.log('mohamad');
+    
+// }
 
 
 
