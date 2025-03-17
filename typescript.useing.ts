@@ -79,7 +79,7 @@ tupleExample[1] = 55
 // const AUTHOR = 2
 
 
-enum Role { ADMIN=1, READ_ONLY_USER, AUTHOR }
+enum Role { ADMIN = 1, READ_ONLY_USER, AUTHOR }
 
 let person = {
     name: "mohamad",
@@ -91,13 +91,36 @@ let person = {
     role: Role.ADMIN
 }
 
-console.log(Role);
+// console.log(Role);
 
 
 // if (person.role === 1) {
 //     console.log('mohamad');
-    
+
 // }
+
+
+
+
+function combine(input1: number | string, input2: number | string) {
+    let result
+    if (typeof input1 == "number" && typeof input2 == "number") {
+        const result = input1 + input2
+        return result
+    } else {
+        result = input1.toString() + input2.toString()
+    }
+    return result
+}
+
+
+const combinedAges = combine(30, 26)
+
+const combinedNames = combine("mohamad", "ali")
+
+
+console.log(combinedAges);
+
 
 
 
