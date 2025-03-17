@@ -35,3 +35,20 @@ let resultText = "Result is :"
 
 add(number1, number2, isPrintResult, resultText);
 
+
+
+// let person:object;
+
+let person:{
+    name:string,
+    age:number,
+    isMale:true
+};
+
+person = {
+    name: "mohamad",
+    age: 23,
+    isMale: true
+}
+
+console.log(person.name + "-" + person.age);
