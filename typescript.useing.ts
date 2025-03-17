@@ -101,8 +101,14 @@ let person = {
 
 
 
+type combineble = number | string;
+type ResultType = "as-number" | "as-text";
 
-function combine(input1: number | string, input2: number | string, resultType: "as-number" | "as-text") {
+
+function combine(
+    input1: combineble,
+    input2: combineble,
+    resultType: ResultType) {
     let result
     if (typeof input1 == "number" && typeof input2 == "number") {
         result = input1 + input2
@@ -125,6 +131,8 @@ const combinedNames = combine("mohamad", "ali", "as-text")
 console.log(combinedAges);
 console.log(combinedStrungAges);
 console.log(combinedNames);
+
+
 
 
 
