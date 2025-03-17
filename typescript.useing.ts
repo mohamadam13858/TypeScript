@@ -149,7 +149,21 @@ let combinedValues: (a: number) => void;
 combinedValues = PrintResult;
 
 
-console.log(combinedValues(8));
+// console.log(combinedValues(8));
+
+let userInput1: unknown = 10
+let userInput2: any = 10
+
+
+let string1: string = userInput1;
+let string2: string = userInput2
+
+
+
+
+userInput2.method();
+
+userInput1.method();
 
 
 
