@@ -77,4 +77,6 @@ function Add(n1, n2) {
 var PrintResult = function (num) {
     console.log("result is : " + num);
 };
-console.log(PrintResult(Add(5, 12)));
+var combinedValues;
+combinedValues = PrintResult;
+console.log(combinedValues(8));

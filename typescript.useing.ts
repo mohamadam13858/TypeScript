@@ -133,7 +133,7 @@ const combinedNames = combine("mohamad", "ali", "as-text")
 // console.log(combinedNames);
 
 
-function Add(n1: number, n2: number) {
+function Add(n1: number, n2: number): number {
     return n1 + n2
 }
 
@@ -142,7 +142,15 @@ const PrintResult = (num: number): void => {
     console.log("result is : " + num);
 
 }
-console.log(PrintResult(Add(5, 12)));
+
+
+let combinedValues: (a: number) => void;
+
+combinedValues = PrintResult;
+
+
+console.log(combinedValues(8));
+
 
 
 
