@@ -54,17 +54,24 @@ var person = {
 // if (person.role === 1) {
 //     console.log('mohamad');
 // }
-function combine(input1, input2) {
+function combine(input1, input2, resultType) {
     var result;
     if (typeof input1 == "number" && typeof input2 == "number") {
-        var result_1 = input1 + input2;
-        return result_1;
+        result = input1 + input2;
     }
     else {
         result = input1.toString() + input2.toString();
     }
-    return result;
+    if (resultType === "as-number") {
+        return +(result);
+    }
+    else {
+        return result.toString();
+    }
 }
-var combinedAges = combine(30, 26);
-var combinedNames = combine("mohamad", "ali");
+var combinedAges = combine(30, 26, "as-text");
+var combinedStrungAges = combine("30", "26", "as-number");
+var combinedNames = combine("mohamad", "ali", "as-text");
 console.log(combinedAges);
+console.log(combinedStrungAges);
+console.log(combinedNames);
