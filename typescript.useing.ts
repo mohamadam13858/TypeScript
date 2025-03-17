@@ -9,7 +9,7 @@ const phoneNumber3: boolean = false;
 
 
 
-function add(n1: number, n2: number, isPrintResult: boolean, resultText: string) {
+const add = (n1: number, n2: number, isPrintResult: boolean, resultText: string) => {
     const result = n1 + n2
     if (isPrintResult) {
         console.log(resultText + result);
@@ -21,13 +21,15 @@ function add(n1: number, n2: number, isPrintResult: boolean, resultText: string)
     return n1 + n2
 }
 
-const number1 = 5;
+let number1: number;
+number1 = 5;
 
-const number2 = 2.8;
 
-const isPrintResult = true;
+let number2 = 2.8;
 
-const resultText = "Result is :"
+let isPrintResult = true;
+
+let resultText = "Result is :"
 
 
 
