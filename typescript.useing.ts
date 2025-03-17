@@ -1,4 +1,24 @@
-console.log("my code will run here...");
+
+var phoneNumber: number;
 
 
-const number1:number = 123 
+let phoneNumber2: string;
+
+
+const phoneNumber3: boolean = false;
+
+
+
+function add(n1:number, n2:number){
+    
+    return n1 + n2
+}
+
+const number1 = 5;
+
+const number2 = 2.8;
+
+
+const result = add(number1 , number2);
+
+console.log(result);
