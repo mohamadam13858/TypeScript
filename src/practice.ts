@@ -20,38 +20,72 @@ class Department {
 }
 
 
-class ItDepartment extends Department{
-    admins : string[]
+class ItDepartment extends Department {
+    admins: string[]
 
-    constructor(id : string ,admins: string[]){
-        super(id , "dkdk")
-       this.admins = admins
+
+
+    constructor(id: string, admins: string[]) {
+        super(id, "dkdk")
+        this.admins = admins
     }
 }
 
-class AccountingDepartment extends Department{
-    constructor(id: string , private reports: string[]){
-        super(id , "kdkdd");
+class AccountingDepartment extends Department {
+
+    private lastReport: string;
+
+
+    get mostRecentReport() {
+        if (this.lastReport) {
+            return this.lastReport;
+        }
+        throw new Error("no report")
     }
 
-    addReport(text:string){
-        this.reports.push(text)
+    set mostRecentReport(value: string) {
+        if (!value) {
+            throw new Error("pleeeeeeeeeeeeeeeeee")
+        }
+        this.addReport(value)
     }
-    printReports(){
+
+    constructor(id: string, private reports: string[]) {
+        super(id, "kdkdd");
+        this.lastReport = reports[0]
+
+    }
+
+    addReport(text: string) {
+        this.reports.push(text)
+        this.lastReport = text;
+    }
+    printReports() {
         console.log(this.reports);
     }
 }
 
-const department = new Department('dk' , 'department')
+const department = new Department('dk', 'department')
 
 department.addEmployee("111111")
 department.addEmployee("222222")
 
 department.printEmployeeInfo()
 
-const accounting = new AccountingDepartment('2' , [])
+const accounting = new AccountingDepartment('2', [])
 
-
+accounting.mostRecentReport = "mohamdggggg"
 accounting.addReport('sumjoifwihjg')
 
 accounting.printReports()
+
+
+console.log(accounting.mostRecentReport);
+
+
+var variable: string;
+
+
+variable = "something"
+
+console.log(variable);

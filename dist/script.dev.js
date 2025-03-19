@@ -32,12 +32,12 @@ class AdminUser extends User {
 }
 const User1 = new User(1, "mohamadhiohe", 664644, "djijggjd;ksj");
 const adminUser = new AdminUser(true);
-console.log(User1);
-console.log(adminUser);
-adminUser.addRole("Adminn");
-adminUser.addRole("hjfhfgh");
-adminUser.addRole("hjfhfgh");
-adminUser.addRole("hjfhfgh");
-adminUser.showRoles();
+// console.log(User1);
+// console.log(adminUser);
+// adminUser.addRole("Adminn")
+// adminUser.addRole("hjfhfgh")
+// adminUser.addRole("hjfhfgh")
+// adminUser.addRole("hjfhfgh")
+// adminUser.showRoles()
 // User1.roles[1]= "blogger"
 // console.log(User1);
