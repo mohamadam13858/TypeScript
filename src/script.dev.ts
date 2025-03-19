@@ -45,13 +45,17 @@ console.log(User1);
 console.log(adminUser);
 
 
+adminUser.addRole("Adminn")
+adminUser.addRole("hjfhfgh")
+adminUser.addRole("hjfhfgh")
+adminUser.addRole("hjfhfgh")
 
-User1.addRole("Admin")
-User1.addRole("mohamad")
+adminUser.showRoles()
+
+
+
 // User1.roles[1]= "blogger"
-User1.showRoles()
 
-User1.email = "jfjfjf"
 
 // console.log(User1);
 

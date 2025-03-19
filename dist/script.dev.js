@@ -34,9 +34,10 @@ const User1 = new User(1, "mohamadhiohe", 664644, "djijggjd;ksj");
 const adminUser = new AdminUser(true);
 console.log(User1);
 console.log(adminUser);
-// User1.addRole("Admin")
-User1.addRole("mohamad");
+adminUser.addRole("Adminn");
+adminUser.addRole("hjfhfgh");
+adminUser.addRole("hjfhfgh");
+adminUser.addRole("hjfhfgh");
+adminUser.showRoles();
 // User1.roles[1]= "blogger"
-User1.showRoles();
-User1.email = "jfjfjf";
 // console.log(User1);
