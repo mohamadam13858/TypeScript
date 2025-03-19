@@ -5,6 +5,9 @@ class Department {
         this.name = name;
         this.employees = [];
     }
+    static createEmployee(name) {
+        return { name: name };
+    }
     describe() {
         console.log(`department ${this.id} : ${this.name}`);
     }
@@ -59,3 +62,4 @@ console.log(accounting.mostRecentReport);
 var variable;
 variable = "something";
 console.log(variable);
+console.log(Department.createEmployee('mohamad habibi'));

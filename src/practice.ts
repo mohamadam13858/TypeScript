@@ -5,6 +5,10 @@ class Department {
 
     }
 
+    static createEmployee(name:string){
+        return {name: name}
+    }
+
     describe() {
         console.log(`department ${this.id} : ${this.name}`);
 
@@ -65,6 +69,8 @@ class AccountingDepartment extends Department {
     }
 }
 
+
+
 const department = new Department('dk', 'department')
 
 department.addEmployee("111111")
@@ -89,3 +95,6 @@ var variable: string;
 variable = "something"
 
 console.log(variable);
+
+console.log(Department.createEmployee('mohamad habibi'));
+
