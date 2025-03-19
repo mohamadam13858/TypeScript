@@ -1,6 +1,6 @@
 class User {
 
-    private roles: string[] = []
+    protected roles: string[] = []
 
     constructor(
         private id: number,
@@ -27,6 +27,15 @@ class AdminUser extends User {
         super(12, "jfkjd", 5949979, "dljfjd");
 
     }
+
+
+    addRole(role: string) {
+        if (role === "Admin") {
+            return ;
+        }
+        this.roles.push(role)
+        
+    }
 }
 
 const User1 = new User(1, "mohamadhiohe", 664644, "djijggjd;ksj");
@@ -37,9 +46,9 @@ console.log(adminUser);
 
 
 
-User1.addRole("admin")
+User1.addRole("Admin")
 User1.addRole("mohamad")
-// User1.roles[1] = "blogger"
+// User1.roles[1]= "blogger"
 User1.showRoles()
 
 User1.email = "jfjfjf"
