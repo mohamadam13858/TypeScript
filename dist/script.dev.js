@@ -1,10 +1,11 @@
 "use strict";
 class User {
-    constructor(e, pn, pass) {
+    constructor(id, email, phonenumber, password) {
+        this.id = id;
+        this.email = email;
+        this.phonenumber = phonenumber;
+        this.password = password;
         this.roles = [];
-        this.email = e;
-        this.phonenumber = pn;
-        this.password = pass;
     }
     print() {
         console.log("email user is:" + this.email);
@@ -17,7 +18,7 @@ class User {
         console.log(this.roles);
     }
 }
-const User1 = new User("mohamadhiohe", 664644, "djijggjd;ksj");
+const User1 = new User(1, "mohamadhiohe", 664644, "djijggjd;ksj");
 User1.addRole("admin");
 User1.addRole("mohamad");
 // User1.roles[1] = "blogger"
