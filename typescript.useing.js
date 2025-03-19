@@ -1,8 +1,9 @@
+"use strict";
 var phoneNumber;
-var phoneNumber2;
-var phoneNumber3 = false;
-var add = function (n1, n2, isPrintResult, resultText) {
-    var result = n1 + n2;
+let phoneNumber2;
+const phoneNumber3 = false;
+const add = (n1, n2, isPrintResult, resultText) => {
+    const result = n1 + n2;
     if (isPrintResult) {
         // console.log(resultText + result);
     }
@@ -11,24 +12,24 @@ var add = function (n1, n2, isPrintResult, resultText) {
     }
     return n1 + n2;
 };
-var number1;
+let number1;
 number1 = 5;
-var number2 = 2.8;
-var isPrintResult = true;
-var resultText = "Result is :";
+let number2 = 2.8;
+let isPrintResult = true;
+let resultText = "Result is :";
 add(number1, number2, isPrintResult, resultText);
 // let person:object;
-var favoriteActivities;
+let favoriteActivities;
 favoriteActivities = ['music', 'coding'];
 // console.log(person.name + "-" + person.age);
 // console.log(person.name);
 // for (const hobby of person.hobbies) {
 //     console.log(hobby);
 // }
-var arrayExample = ['mohamad', 32, true];
+let arrayExample = ['mohamad', 32, true];
 arrayExample[0] = false;
 arrayExample[1] = "hassan";
-var tupleExample;
+let tupleExample;
 tupleExample = ["mj", 55, true];
 tupleExample[0] = "jdjh";
 tupleExample[1] = 55;
@@ -41,7 +42,7 @@ var Role;
     Role[Role["READ_ONLY_USER"] = 2] = "READ_ONLY_USER";
     Role[Role["AUTHOR"] = 3] = "AUTHOR";
 })(Role || (Role = {}));
-var person = {
+let person = {
     name: "mohamad",
     age: 23,
     isMale: true,
@@ -51,7 +52,7 @@ var person = {
     role: Role.ADMIN
 };
 function combine(input1, input2, resultType) {
-    var result;
+    let result;
     if (typeof input1 == "number" && typeof input2 == "number") {
         result = input1 + input2;
     }
@@ -65,18 +66,26 @@ function combine(input1, input2, resultType) {
         return result.toString();
     }
 }
-var combinedAges = combine(30, 26, "as-number");
-var combinedStrungAges = combine("30", "26", "as-number");
-var combinedNames = combine("mohamad", "ali", "as-text");
+const combinedAges = combine(30, 26, "as-number");
+const combinedStrungAges = combine("30", "26", "as-number");
+const combinedNames = combine("mohamad", "ali", "as-text");
 // console.log(combinedAges);
 // console.log(combinedStrungAges);
 // console.log(combinedNames);
 function Add(n1, n2) {
     return n1 + n2;
 }
-var PrintResult = function (num) {
+const PrintResult = (num) => {
     console.log("result is : " + num);
 };
-var combinedValues;
+let combinedValues;
 combinedValues = PrintResult;
-console.log(combinedValues(8));
+// console.log(combinedValues(8));
+let userInput1 = 10;
+let userInput2 = 10;
+// let string1: string = userInput1;
+// let string2: string = userInput2
+// userInput2.method();
+// userInput1.method();
+let user = "ali";
+console.log(user);
