@@ -1,4 +1,6 @@
-console.log("mohamad");
+const button = document.querySelector('button')!;
 
-
-const number: number = 12 
+button.addEventListener('click' , ()=>{
+    console.log("clicked !!!");
+    
+})
