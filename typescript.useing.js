@@ -88,4 +88,5 @@ let userInput2 = 10;
 // userInput2.method();
 // userInput1.method();
 let user = "ali";
+// console.log(user);
 console.log(user);

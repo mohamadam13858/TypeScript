@@ -169,7 +169,13 @@ let userInput2: any = 10
 let user = "ali";
 
 
+// console.log(user);
+
 console.log(user);
+
+
+
+
 
 
 
