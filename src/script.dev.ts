@@ -9,13 +9,16 @@ class User {
         this.password = pass;
     }
 
+    print(this: User) {
+        console.log("email user is:" + this.email);
+    }
 }
 
-const firstUser= new User("mohamadhiohe" , 664644 , "djijggjd;ksj");
+const firstUser = new User("mohamadhiohe", 664644, "djijggjd;ksj");
 
-const secondUser = new User("kjkjj" , 85585 , "dlhjfhf")
+firstUser.print()
 
-console.log(firstUser);
-console.log(secondUser);
+const firstusercopy = {email:"sad" , phonenumber:8499, password:"jfkd",  print: firstUser.print, }
 
+firstusercopy.print()
 
