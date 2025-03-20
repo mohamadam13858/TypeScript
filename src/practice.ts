@@ -5,11 +5,11 @@ abstract class Department {
 
     }
 
-    static createEmployee(name:string){
-        return {name: name}
+    static createEmployee(name: string) {
+        return { name: name }
     }
 
-    abstract describe():void;
+    abstract describe(): void;
 
     addEmployee(employees: string) {
         this.employees.push(employees)
@@ -31,7 +31,7 @@ class ItDepartment extends Department {
         this.admins = admins
     }
     describe(): void {
-        
+
     }
 }
 
@@ -39,6 +39,7 @@ class AccountingDepartment extends Department {
 
     private lastReport: string;
 
+    private static istance: AccountingDepartment;
 
     get mostRecentReport() {
         if (this.lastReport) {
@@ -54,14 +55,21 @@ class AccountingDepartment extends Department {
         this.addReport(value)
     }
 
-    constructor(id: string, private reports: string[]) {
+    private constructor(id: string, private reports: string[]) {
         super(id, "kdkdd");
         this.lastReport = reports[0]
 
     }
 
-    describe(){
-        console.log('26245848464456245894564894');  
+    static getInstance(){
+        if (AccountingDepartment.istance) {
+            return this.istance
+        }
+        this.istance = new AccountingDepartment("mohamad" , [])
+    }
+
+    describe() {
+        console.log('26245848464456245894564894');
     }
 
     addReport(text: string) {
@@ -78,15 +86,12 @@ class AccountingDepartment extends Department {
 
 
 
-const accounting = new AccountingDepartment('2', [])
+// const accounting = new AccountingDepartment('2', [])
+const accountingg = AccountingDepartment.getInstance()
+accountingg?.addReport('sumjoifwihjg')
 
-accounting.mostRecentReport = "mohamdggggg"
-accounting.addReport('sumjoifwihjg')
+accountingg?.printReports()
 
-accounting.printReports()
-
-
-console.log(accounting.mostRecentReport);
 
 
 var variable: string;
@@ -98,4 +103,3 @@ console.log(variable);
 
 console.log(Department.createEmployee('mohamad habibi'));
 
-       

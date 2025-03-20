@@ -41,6 +41,12 @@ class AccountingDepartment extends Department {
         this.reports = reports;
         this.lastReport = reports[0];
     }
+    static getInstance() {
+        if (AccountingDepartment.istance) {
+            return this.istance;
+        }
+        this.istance = new AccountingDepartment("mohamad", []);
+    }
     describe() {
         console.log('26245848464456245894564894');
     }
@@ -52,11 +58,10 @@ class AccountingDepartment extends Department {
         console.log(this.reports);
     }
 }
-const accounting = new AccountingDepartment('2', []);
-accounting.mostRecentReport = "mohamdggggg";
-accounting.addReport('sumjoifwihjg');
-accounting.printReports();
-console.log(accounting.mostRecentReport);
+// const accounting = new AccountingDepartment('2', [])
+const accountingg = AccountingDepartment.getInstance();
+accountingg === null || accountingg === void 0 ? void 0 : accountingg.addReport('sumjoifwihjg');
+accountingg === null || accountingg === void 0 ? void 0 : accountingg.printReports();
 var variable;
 variable = "something";
 console.log(variable);
