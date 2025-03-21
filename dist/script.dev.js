@@ -32,11 +32,22 @@ class AdminUser extends User {
 }
 const User1 = new User(1, "mohamadhiohe", 664644, "djijggjd;ksj");
 const adminUser = new AdminUser(true);
-let user1;
-user1 = {
-    name: "ali gholami",
-    age: 55,
-    greet(phras) {
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
     }
-};
-console.log(user1);
+    greet(phras) {
+        console.log(phras + " " + this.name);
+    }
+}
+const uuuser = new Person("mohamad", 55);
+uuuser.greet("jfjfjfj");
+// let user1 : Person
+// user1 = {
+//     name:"ali gholami" ,
+//     age:55 ,
+//     greet(phras){
+//     }
+// }
+// console.log(user1);

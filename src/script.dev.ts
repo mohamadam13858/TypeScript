@@ -81,11 +81,17 @@ class Person implements Greetable {
 
 
     greet(phras: string): void {
+        console.log(phras + " " + this.name);
+
 
     }
 
 
 }
+
+const uuuser = new Person("mohamad" , 55)
+
+uuuser.greet("jfjfjfj")
 
 
 
