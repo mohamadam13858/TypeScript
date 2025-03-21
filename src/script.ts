@@ -122,3 +122,17 @@ moveAnimal({
     type: "horse",
     runningSpeed: 200
 })
+
+// const paragraph = document.querySelector('p');
+
+
+
+// const paragraph = document.getElementById('para')
+
+
+// const userInput = <HTMLInputElement> document.getElementById("ff")
+
+
+const userInput = document.getElementById("ff") as HTMLInputElement;
+
+userInput.value = 'hi there...'
