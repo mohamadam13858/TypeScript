@@ -18,19 +18,30 @@ const e1: AdminedEmployee = {
     startDate: new Date()
 }
 
+
+// type Numeric = number | boolean;
+
+// type Universal = Combinable & Numeric;
+
 type Combinable = string | number;
 
-type Numeric = number | boolean;
-
-type Universal = Combinable & Numeric;
-
-
-
+function addParamter(a: string , b: string) : string
+function addParamter(a: number , b: number) : number
+function addParamter(a: string , b: number) : string
+function addParamter(a: number , b: string) : string
 function addParamter(a: combineble, b: combineble) {
-    if (typeof a == "number" && typeof b == "number") {
-        return a + b
+    if (typeof a == "string" || typeof b == "string") {
+        return a.toString() + b.toString()
     }
+
+    return a + b
 }
+
+
+const result = addParamter('mohamad' , 'hashemi')
+
+result.split('')
+
 
 
 type unknownEmployee = Employee | Admin;
@@ -136,3 +147,5 @@ moveAnimal({
 const userInput = document.getElementById("ff") as HTMLInputElement;
 
 userInput.value = 'hi there...'
+
+
