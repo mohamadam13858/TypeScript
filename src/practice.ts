@@ -39,7 +39,7 @@ class AccountingDepartment extends Department {
 
     private lastReport: string;
 
-    private static istance: AccountingDepartment;
+    private static Istance: AccountingDepartment;
 
     get mostRecentReport() {
         if (this.lastReport) {
@@ -62,10 +62,10 @@ class AccountingDepartment extends Department {
     }
 
     static getInstance(){
-        if (AccountingDepartment.istance) {
-            return this.istance
+        if (AccountingDepartment.Istance) {
+            return this.Istance
         }
-        this.istance = new AccountingDepartment("mohamad" , [])
+        this.Istance = new AccountingDepartment("mohamad" , [])
     }
 
     describe() {
@@ -91,6 +91,9 @@ const accountingg = AccountingDepartment.getInstance()
 accountingg?.addReport('sumjoifwihjg')
 
 accountingg?.printReports()
+
+console.log(accountingg);
+
 
 
 

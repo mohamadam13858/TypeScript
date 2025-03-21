@@ -31,10 +31,10 @@ class AdminUser extends User {
 
     addRole(role: string) {
         if (role === "Admin") {
-            return ;
+            return;
         }
         this.roles.push(role)
-        
+
     }
 }
 
@@ -61,6 +61,50 @@ const adminUser = new AdminUser(true);
 
 
 
+interface Greetable {
+    name: string,
+    greet(phras: string): void,
+
+}
+
+
+class Person implements Greetable {
+
+    name: string;
+    age: number
+
+
+    constructor(name: string, age: number) {
+        this.name = name
+        this.age = age
+    }
+
+
+    greet(phras: string): void {
+
+    }
+
+
+}
+
+
+
+
+
+
+// let user1 : Person
+
+
+// user1 = {
+//     name:"ali gholami" ,
+//     age:55 ,
+//     greet(phras){
+
+//     }
+// }
+
+
+// console.log(user1);
 
 
 
