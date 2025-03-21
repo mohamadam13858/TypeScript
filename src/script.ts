@@ -44,7 +44,81 @@ function printEmployeeInfo(emp: unknownEmployee) {
     if ("phoneNumber" in emp) {
         console.log(emp.phoneNumber);
     }
+}
 
 
+
+class Car {
+    drive() {
+        console.log("driving");
+
+    }
 
 }
+class Truck {
+    drive() {
+        console.log("driving");
+
+    }
+    loadCargo(amount: number) {
+        console.log(amount);
+    }
+}
+
+
+type Vehicle = Car | Truck
+
+const v1 = new Car();
+
+const v2 = new Truck();
+
+function useVehicle(vehicle: Vehicle) {
+    vehicle.drive()
+    // if (vehicle instanceof Truck) {
+    //     vehicle.loadCargo(2000)
+    // }
+
+
+    if ("loadCargo" in vehicle) {
+        vehicle.loadCargo(2000)
+    }
+}
+
+
+
+
+interface Bird {
+    type: "bird",
+    flyingSpeed: number
+}
+
+
+interface Horse {
+    type: "horse"
+    runningSpeed: number
+}
+
+type Animal = Bird | Horse;
+
+function moveAnimal(animal: Animal) {
+
+    let speed
+
+    switch (animal.type) {
+        case "bird":
+            speed = animal.flyingSpeed;
+
+            break;
+        case "horse":
+
+            speed = animal.runningSpeed
+
+            break;
+    }
+
+}
+
+moveAnimal({
+    type: "horse",
+    runningSpeed: 200
+})
