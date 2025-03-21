@@ -60,9 +60,28 @@ const adminUser = new AdminUser(true);
 // console.log(User1);
 
 
+// type Addfn = (a: number, d: number) => number
 
-interface Greetable {
-    name: string,
+
+// let add: Addfn;
+
+
+// add = (n1: number, n2: number) => {
+//     return n1 + n2
+// }
+
+
+
+
+
+interface Named {
+    name: string
+}
+
+
+interface Greetable extends Named {
+
+
     greet(phras: string): void,
 
 }
@@ -70,7 +89,7 @@ interface Greetable {
 
 class Person implements Greetable {
 
-    name: string;
+    name: string
     age: number
 
 
@@ -89,7 +108,7 @@ class Person implements Greetable {
 
 }
 
-const uuuser = new Person("mohamad" , 55)
+const uuuser = new Person("mohamad", 55)
 
 uuuser.greet("jfjfjfj")
 
