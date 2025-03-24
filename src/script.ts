@@ -38,26 +38,34 @@
 
 // const mergedObj2 = merge({ age: 55 }, { name: "mohamad" });
 
-interface Lengthy {
-    length: number;
+// interface Lengthy {
+//     length: number;
+// }
+
+
+
+// const countAndDescribe = <T extends Lengthy>(element: T) => {
+//     let descriptionText = 'Got No Value';
+//     if (element.length === 1) {
+//         descriptionText = "got 1 value "
+//     } else if (element.length > 1) {
+//         descriptionText = `got ${element.length} elements`
+//     }
+
+//     return [element, descriptionText]
+// }
+
+
+// console.log(countAndDescribe('hi mohamod'));
+// console.log(countAndDescribe(['mohamad', 'leyla']));
+
+
+
+const extractAndConvert = <T extends object , U extends keyof T > (obj: T , key : U) =>{
+    return obj[key]
 }
 
 
 
-const  countAndDescribe =<T extends Lengthy>(element: T) => {
-    let descriptionText = 'Got No Value' ;
-      if (element.length === 1 ) {
-        descriptionText = "got 1 value "
-      }else if (element.length > 1) {
-        descriptionText = `got ${element.length} elements`
-      }
 
-      return[element , descriptionText]
-}
-
-
-console.log(countAndDescribe('hi mohamod'));
-console.log(countAndDescribe(['mohamad' , 'leyla']));
-
-
-
+extractAndConvert({name: "ali"},'name')
