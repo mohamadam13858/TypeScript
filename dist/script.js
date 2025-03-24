@@ -18,4 +18,4 @@
 function merge(objA, objB) {
     return Object.assign(objA, objB);
 }
-console.log(merge({ name: 'mohamad' }, { age: 55 }));
+const mergedObj2 = merge({ age: 55 }, { name: "mohamad" });
