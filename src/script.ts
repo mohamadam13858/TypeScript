@@ -71,38 +71,84 @@
 // extractAndConvert({name: "ali"},'name')
 
 
-class DataStorage<T extends string | number | boolean> {
+// class DataStorage<T extends string | number | boolean> {
 
 
-    private data: T[] = [];
+//     private data: T[] = [];
 
 
-    addItem(item: T) {
-        this.data.push(item)
-    }
+//     addItem(item: T) {
+//         this.data.push(item)
+//     }
 
 
-    removeitem(item: T) {
-        this.data.splice(this.data.indexOf(item), 1);
-    }
+//     removeitem(item: T) {
+//         this.data.splice(this.data.indexOf(item), 1);
+//     }
 
-    getItems() {
-        return [...this.data]
-    }
+//     getItems() {
+//         return [...this.data]
+//     }
 
+// }
+
+
+// const textStroage = new DataStorage<string>();
+
+
+// textStroage.addItem('mohamad');
+// textStroage.addItem('ali');
+// textStroage.removeitem('ali');
+
+// console.log(textStroage.getItems());
+
+// const numberStorage = new DataStorage<number>();
+
+// numberStorage.addItem(123)
+
+
+
+interface Mohamadd {
+    name: string;
+    age: number;
+    email: string;
 }
 
 
-const textStroage = new DataStorage<string>();
+
+const mohammad: Mohamadd = {
+    name: "mohamd",
+    age: 45,
+    email: "jifjipewjipgfjo"
+
+}
+
+const Mohammad: Partial<Mohamadd> = {
+    name: "ali",
+    age: 66,
+    email: ""
+}
 
 
-textStroage.addItem('mohamad');
-textStroage.addItem('ali');
-textStroage.removeitem('ali');
 
-console.log(textStroage.getItems());
 
-const numberStorage = new DataStorage<number>();
+interface Props {
+    a?: number;
+    b?: string
+}
 
-numberStorage.addItem(123)
+const obj: Props = { a: 3 };
+
+const obj2: Required<Props> = { a: 5545, b: "ldk" }
+
+
+interface Todo {
+    title: string ;
+
+}
+
+const todo:Readonly<Todo> = {
+    title: "learn typeScript"
+}
+
 
