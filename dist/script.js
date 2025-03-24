@@ -1,11 +1,21 @@
 "use strict";
-var _a;
-const fetchUserData = {
-    id: "u1",
-    name: "mohamad",
-    job: {
-        title: 'seo',
-        description: "jhfihjjhfi"
-    }
-};
-console.log((_a = fetchUserData === null || fetchUserData === void 0 ? void 0 : fetchUserData.job) === null || _a === void 0 ? void 0 : _a.description);
+// const fetchUserData = {
+//     id: "u1" , 
+//     name:"mohamad",
+//     job: {
+//        title: 'seo',
+//        description: "jhfihjjhfi"
+//     }
+// }
+// console.log(fetchUserData?.job?.description);
+// const Nemes: Array<string> = [
+// ]
+// const promise: Promise<string> = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve('this is Done')
+//     }, 2000);
+// });
+function merge(objA, objB) {
+    return Object.assign(objA, objB);
+}
+console.log(merge({ name: 'mohamad' }, { age: 55 }));
