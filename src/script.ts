@@ -61,11 +61,48 @@
 
 
 
-const extractAndConvert = <T extends object , U extends keyof T > (obj: T , key : U) =>{
-    return obj[key]
+// const extractAndConvert = <T extends object , U extends keyof T > (obj: T , key : U) =>{
+//     return obj[key]
+// }
+
+
+
+
+// extractAndConvert({name: "ali"},'name')
+
+
+class DataStorage<T extends string | number | boolean> {
+
+
+    private data: T[] = [];
+
+
+    addItem(item: T) {
+        this.data.push(item)
+    }
+
+
+    removeitem(item: T) {
+        this.data.splice(this.data.indexOf(item), 1);
+    }
+
+    getItems() {
+        return [...this.data]
+    }
+
 }
 
 
+const textStroage = new DataStorage<string>();
 
 
-extractAndConvert({name: "ali"},'name')
+textStroage.addItem('mohamad');
+textStroage.addItem('ali');
+textStroage.removeitem('ali');
+
+console.log(textStroage.getItems());
+
+const numberStorage = new DataStorage<number>();
+
+numberStorage.addItem(123)
+

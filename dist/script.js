@@ -33,7 +33,26 @@
 // }
 // console.log(countAndDescribe('hi mohamod'));
 // console.log(countAndDescribe(['mohamad', 'leyla']));
-const extractAndConvert = (obj, key) => {
-    return obj[key];
-};
-extractAndConvert({ name: "ali" }, 'name');
+// const extractAndConvert = <T extends object , U extends keyof T > (obj: T , key : U) =>{
+//     return obj[key]
+// }
+// extractAndConvert({name: "ali"},'name')
+class DataStorage {
+    constructor() {
+        this.data = [];
+    }
+    addItem(item) {
+        this.data.push(item);
+    }
+    removeitem(item) {
+        this.data.splice(this.data.indexOf(item), 1);
+    }
+    getItems() {
+        return [...this.data];
+    }
+}
+const textStroage = new DataStorage();
+textStroage.addItem('mohamad');
+textStroage.addItem('ali');
+textStroage.removeitem('ali');
+console.log(textStroage.getItems());
