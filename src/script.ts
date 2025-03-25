@@ -1,16 +1,20 @@
-const Logger = (target: any)=>{
-    console.log(target);
-    
+const Logger = (logString: string) => {
+
+    return function (constructor: Function) {
+        console.log(constructor);
+        console.log(logString);
+
+    }
 }
 
-@Logger
+@Logger("LOGGING - PERSON - LINE 11")
 class Personn {
-  name="mohamad"
+    name = "mohamad"
 
-  constructor(){
-    console.log("creating person object ... ");
-    
-  }
+    constructor() {
+        console.log("creating person object ... ");
+
+    }
 
 
 }
