@@ -1,58 +1,21 @@
 "use strict";
-// const fetchUserData = {
-//     id: "u1" , 
-//     name:"mohamad",
-//     job: {
-//        title: 'seo',
-//        description: "jhfihjjhfi"
-//     }
-// }
-// console.log(fetchUserData?.job?.description);
-// const Nemes: Array<string> = [
-// ]
-// const promise: Promise<string> = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         resolve('this is Done')
-//     }, 2000);
-// });
-// function merge<T extends object, B extends object>(objA: T, objB: B) {
-//     return Object.assign(objA, objB)
-// }
-// const mergedObj2 = merge({ age: 55 }, { name: "mohamad" });
-// interface Lengthy {
-//     length: number;
-// }
-// const countAndDescribe = <T extends Lengthy>(element: T) => {
-//     let descriptionText = 'Got No Value';
-//     if (element.length === 1) {
-//         descriptionText = "got 1 value "
-//     } else if (element.length > 1) {
-//         descriptionText = `got ${element.length} elements`
-//     }
-//     return [element, descriptionText]
-// }
-// console.log(countAndDescribe('hi mohamod'));
-// console.log(countAndDescribe(['mohamad', 'leyla']));
-// const extractAndConvert = <T extends object , U extends keyof T > (obj: T , key : U) =>{
-//     return obj[key]
-// }
-// extractAndConvert({name: "ali"},'name')
-class DataStorage {
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+const Logger = (target) => {
+    console.log(target);
+};
+let Personn = class Personn {
     constructor() {
-        this.data = [];
+        this.name = "mohamad";
+        console.log("creating person object ... ");
     }
-    addItem(item) {
-        this.data.push(item);
-    }
-    removeitem(item) {
-        this.data.splice(this.data.indexOf(item), 1);
-    }
-    getItems() {
-        return [...this.data];
-    }
-}
-const textStroage = new DataStorage();
-textStroage.addItem('mohamad');
-textStroage.addItem('ali');
-textStroage.removeitem('ali');
-console.log(textStroage.getItems());
+};
+Personn = __decorate([
+    Logger
+], Personn);
+const personn = new Personn();
+console.log(personn);
