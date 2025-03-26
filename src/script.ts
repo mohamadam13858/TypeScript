@@ -38,4 +38,45 @@ const personn = new Personn();
 
 
 
-console.log(personn);
+// console.log(personn);
+
+
+// -------------
+
+
+const Log = (target: any, porperyName: any) => {
+    console.log("log Decorator Excuted");
+
+    console.log(target);
+    console.log(porperyName);
+
+
+}
+
+
+class Product {
+
+
+    @Log
+    title: string;
+    private _price: number;
+
+    set price(val: number) {
+        if (val > 0) {
+            this._price = val
+        }
+        else {
+            throw Error("Invalid Price")
+        }
+    }
+    constructor(t: string, p: number) {
+        this.title = t,
+            this._price = p
+    }
+
+
+    getPriceWithTax(tax: number) {
+        return this._price + tax;
+
+    }
+}

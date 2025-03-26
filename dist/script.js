@@ -18,7 +18,6 @@ const addTemplate = (template, hookId) => {
         if (hookEl) {
             hookEl.innerHTML = template;
             hookEl.querySelector('h1').textContent = p.name;
-            hookEl.querySelector('h1').textContent = constructor.name;
         }
     };
 };
@@ -33,4 +32,30 @@ Personn = __decorate([
     addTemplate('<h1> My Person Object</h1>', 'app')
 ], Personn);
 const personn = new Personn();
-console.log(personn);
+// console.log(personn);
+// -------------
+const Log = (target, porperyName) => {
+    console.log("log Decorator Excuted");
+    console.log(target);
+    console.log(porperyName);
+};
+class Product {
+    set price(val) {
+        if (val > 0) {
+            this._price = val;
+        }
+        else {
+            throw Error("Invalid Price");
+        }
+    }
+    constructor(t, p) {
+        this.title = t,
+            this._price = p;
+    }
+    getPriceWithTax(tax) {
+        return this._price + tax;
+    }
+}
+__decorate([
+    Log
+], Product.prototype, "title", void 0);
