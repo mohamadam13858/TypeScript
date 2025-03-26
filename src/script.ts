@@ -44,23 +44,41 @@ const personn = new Personn();
 // -------------
 
 
-const Log = (target: any, porperyName: any) => {
+const Log = (target: any, propertyName: any) => {
     console.log("log Decorator Excuted");
-
     console.log(target);
-    console.log(porperyName);
+    console.log(propertyName);
 
 
 }
 
+const Log2 = (target: any, name: string, descriptor: PropertyDescriptor) => {
+    console.log("accessor decorator");
+    console.log(target);
+    console.log(name);
+    console.log(descriptor);
+}
+
+const Log3 = (target: any , name: string , descriptor: PropertyDescriptor) => {
+    console.log("jfjfjfj decorator");
+    console.log(target);
+    console.log(name);
+    console.log(descriptor);
+}
+
+const Log4 = (target:any , name:string , position: number) => {
+    console.log("mmmmmmm decorator");
+    console.log(target);
+    console.log(name);
+    console.log(position);
+}
+
 
 class Product {
-
-
     @Log
     title: string;
     private _price: number;
-
+    @Log2
     set price(val: number) {
         if (val > 0) {
             this._price = val
@@ -74,9 +92,12 @@ class Product {
             this._price = p
     }
 
-
-    getPriceWithTax(tax: number) {
+    @Log3
+    getPriceWithTax( tax: number ,@Log4 tax2:number) {
         return this._price + tax;
 
     }
 }
+
+
+const p = new Product("lap top" , 12000)
